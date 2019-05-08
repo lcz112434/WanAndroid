@@ -70,7 +70,7 @@ public class HomeAdapter extends RecyclerView.Adapter {
                 viewHolder.baner.setImages(mBanner)
                         .setBannerTitles(mList)
                         .setBannerStyle(BannerConfig.TITLE_BACKGROUND)
-                        .setBannerAnimation(Transformer.DepthPage)
+//                        .setBannerAnimation(Transformer.DepthPage)
                         .setImageLoader(new ImageLoader() {
                             @Override
                             public void displayImage(Context context, Object path, ImageView imageView) {
@@ -114,11 +114,12 @@ public class HomeAdapter extends RecyclerView.Adapter {
             } else {
                 viewHolder2.tv_Fenlei.setVisibility(View.INVISIBLE);
             }
+            final int finalMposition = mposition;
             viewHolder2.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (mItemclick != null) {
-                        mItemclick.onitemclick(position);
+                        mItemclick.onitemclick(finalMposition);
                     }
                 }
             });

@@ -36,7 +36,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/icon_wan" />
+                        android:src="@drawable/wan" />
 
                     <TextView
                         android:id="@+id/autor"

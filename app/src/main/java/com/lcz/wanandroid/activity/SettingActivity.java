@@ -24,6 +24,7 @@ import com.lcz.wanandroid.utils.CircularAnimUtil;
 import com.lcz.wanandroid.utils.Constants;
 import com.lcz.wanandroid.utils.ShareUtil;
 import com.lcz.wanandroid.utils.SnackbarUtil;
+import com.lcz.wanandroid.utils.ToastUtil;
 
 import java.io.File;
 
@@ -101,9 +102,9 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-//                    Log.d(TAG, "mCheckboxSett3 onCheckedChanged:      "+"yes");
+                    ToastUtil.showLong("暂不支持该功能,如需帮助请反馈");
                 } else {
-//                    Log.d(TAG, "mCheckboxSett3 onCheckedChanged:      "+"no");
+
                 }
             }
         });

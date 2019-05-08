@@ -14,11 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme">
         <activity android:name=".activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.WebActivity" />
@@ -28,6 +24,13 @@
         <activity android:name=".activity.aboutActivity" />
         <activity android:name=".activity.CollectActivity" />
         <activity android:name=".activity.SettingActivity"></activity>
+        <activity android:name=".activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -1,69 +1,88 @@
 package com.lcz.wanandroid.activity;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.lcz.wanandroid.R;
+import com.lcz.wanandroid.activity.login.LoginBean;
+import com.lcz.wanandroid.activity.login.LoginP;
+import com.lcz.wanandroid.activity.login.LoginV;
+import com.lcz.wanandroid.base.BaseActivity;
+import com.lcz.wanandroid.utils.ToastUtil;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    private ImageView mImgReturn;
-    /**
-     * 请输入用户名
-     */
-    private EditText mEtLogin;
-    /**
-     * 请输入密码
-     */
-    private EditText mEtPsw;
-    /**
-     * 登录
-     */
-    private Button mBtnLogin;
-    /**
-     * 注册
-     */
-    private Button mBtnRegister;
+public class LoginActivity extends BaseActivity<LoginV, LoginP> implements LoginV {
+
+
+    @BindView(R.id.img_return)
+    ImageView imgReturn;
+    @BindView(R.id.et_login)
+    EditText etLogin;
+    @BindView(R.id.et_psw)
+    EditText etPsw;
+    @BindView(R.id.btn_login)
+    Button btnLogin;
+    @BindView(R.id.btn_register)
+    Button btnRegister;
+    private String mName;
+    private String mPsw;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        initView();
-
-    }
-
-
-    private void initView() {
-        mImgReturn = (ImageView) findViewById(R.id.img_return);
-        mImgReturn.setOnClickListener(this);
-        mEtLogin = (EditText) findViewById(R.id.et_login);
-        mEtPsw = (EditText) findViewById(R.id.et_psw);
-        mBtnLogin = (Button) findViewById(R.id.btn_login);
-        mBtnLogin.setOnClickListener(this);
-        mBtnRegister = (Button) findViewById(R.id.btn_register);
-        mBtnRegister.setOnClickListener(this);
+    public void onSussion(LoginBean bean) {
+        String ret = bean.getRet();
+        if (bean.getCode()==200) {
+            ToastUtil.showShort("1");
+        } else {
+            ToastUtil.showShort("2");
+        }
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            default:
-                break;
+    protected void initView() {
+        super.initView();
+        mName = etLogin.getText().toString().trim();
+        mPsw = etPsw.getText().toString().trim();
+    }
+
+    @Override
+    protected void initData() {
+        super.initData();
+    }
+
+
+    @Override
+    protected LoginP Inpresneter() {
+        return new LoginP();
+    }
+
+    @Override
+    protected int LayoutId() {
+        return R.layout.activity_login;
+    }
+
+
+    @OnClick({R.id.img_return, R.id.btn_login, R.id.btn_register})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
             case R.id.img_return:
                 finish();
                 break;
             case R.id.btn_login:
+//                if (mName != null && mPsw != null) {
+//                    mpresenter.setData(mName, mPsw);
+//                } else {
+//                    ToastUtil.showShort("您输入的账号密码不能为空");
+//                }
+                ToastUtil.showShort("系统更新中... 暂时停用登陆服务 \r\n \r\n 别着急正在努力更新中 (*❦ω❦)");
                 break;
             case R.id.btn_register:
+                ToastUtil.showShort("系统更新中... 暂时停用注册服务 \r\n \r\n 别着急正在努力更新中 (*❦ω❦)");
                 break;
         }
     }

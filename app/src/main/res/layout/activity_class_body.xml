@@ -25,7 +25,7 @@
                     android:id="@+id/toobar_body"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:background="@color/blues"
+                    android:background="@drawable/blue_gradient_bg"
                     android:fitsSystemWindows="true"
                     app:layout_scrollFlags="scroll|enterAlways">
 

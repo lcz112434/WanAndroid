@@ -199,18 +199,14 @@ public class MainActivity extends AppCompatActivity {
                         mTvToobar.setText("首页");
                         mRg.setVisibility(View.VISIBLE);
                         mDl.closeDrawer(Gravity.LEFT);
-
                         break;
                     case R.id.item_collect:
                         Intent intent = new Intent(MainActivity.this, CollectActivity.class);
                         startActivity(intent);
-                        mDl.closeDrawer(Gravity.LEFT);
                         break;
                     case R.id.item_setting:
                         Intent intent1 = new Intent(MainActivity.this, SettingActivity.class);
                         startActivity(intent1);
-
-                        mDl.closeDrawer(Gravity.LEFT);
                         break;
                     case R.id.item_about:
                         Intent intent2 = new Intent(MainActivity.this, aboutActivity.class);

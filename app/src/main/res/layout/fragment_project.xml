@@ -8,17 +8,23 @@
     android:orientation="vertical"
     tools:context=".fragment.Project.ProjectFragment">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab_project"
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_48"
         android:background="@color/white"
-        android:layout_margin="8dp"
-        app:tabBackground="@drawable/shape_blue"
-        app:tabIndicatorHeight="0dp"
-        android:minHeight="30dp"
-        app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/red"></android.support.design.widget.TabLayout>
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        app:tl_indicator_color="@color/orgen"
+        app:tl_textSelectColor="@color/white"
+        app:tl_textUnselectColor="@color/gray"
+        app:tl_divider_color="@color/orgen"
+        app:tl_divider_width="@dimen/dp_1"
+        app:tl_divider_padding="@dimen/dp_10"
+        app:tl_indicator_corner_radius="@dimen/dp_5"
+        app:tl_indicator_margin_left="@dimen/dp_5"
+        app:tl_indicator_margin_right="@dimen/dp_5"
+        app:tl_indicator_style="BLOCK" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_project"

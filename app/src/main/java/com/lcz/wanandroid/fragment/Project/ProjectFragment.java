@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.flyco.tablayout.SlidingTabLayout;
 import com.lcz.wanandroid.R;
 import com.lcz.wanandroid.adapter.ProjectAdapter;
 import com.lcz.wanandroid.base.BaseFragment;
@@ -32,8 +33,8 @@ public class ProjectFragment extends BaseFragment<ProjectV, ProjectP> implements
 
 
     private static final String TAG = "ProjectFragment";
-    @BindView(R.id.tab_project)
-    TabLayout tabProject;
+    @BindView(R.id.tabLayout)
+    SlidingTabLayout tabLayout;
     @BindView(R.id.vp_project)
     ViewPager vpProject;
     Unbinder unbinder;
@@ -56,7 +57,7 @@ public class ProjectFragment extends BaseFragment<ProjectV, ProjectP> implements
     @Override
     public void initView() {
         super.initView();
-        LinearLayout linearLayout = (LinearLayout) tabProject.getChildAt(0);
+        LinearLayout linearLayout = (LinearLayout) tabLayout.getChildAt(0);
         linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
         linearLayout.setDividerDrawable(ContextCompat.getDrawable(getContext(), R.drawable.layout_divider_vertical));
     }
@@ -82,7 +83,7 @@ public class ProjectFragment extends BaseFragment<ProjectV, ProjectP> implements
                 }
                 ProjectAdapter projectAdapter = new ProjectAdapter(getChildFragmentManager(), data, fragments);
                 vpProject.setAdapter(projectAdapter);
-                tabProject.setupWithViewPager(vpProject);
+                tabLayout.setViewPager(vpProject);
             }
         });
     }

@@ -71,6 +71,11 @@ public class NavBodyAdapter extends RecyclerView.Adapter {
                     flow.addView(textview);
 //                }
 //            }
+                if (i % 3 == 0) {
+                    textview.setBackground(context.getResources().getDrawable(R.drawable.shape_ge));
+                } else if (i % 2 == 0) {
+                    textview.setBackground(context.getResources().getDrawable(R.drawable.shape_redddd));
+                }
                 final int finalI = i;
                 textview.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,6 +32,9 @@ public class CollectActivity extends AppCompatActivity {
     private Toolbar mToobar;
     private RecyclerView mRlvCollect;
     private ImageView mBackIv;
+    private int a=0;
+    private List<Person> mPeople;
+    private CollectAdapter mCollectAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +45,14 @@ public class CollectActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        final List<Person> people = MyUtils.getmMyUtils().QueryAll();
-        CollectAdapter collectAdapter = new CollectAdapter(people, this);
-        mRlvCollect.setAdapter(collectAdapter);
+        mPeople = MyUtils.getmMyUtils().QueryAll();
+        mCollectAdapter = new CollectAdapter(mPeople, this);
+        mRlvCollect.setAdapter(mCollectAdapter);
         mRlvCollect.setLayoutManager(new LinearLayoutManager(this));
-        collectAdapter.setBaseitemclick(new Baseitemclick() {
+        mCollectAdapter.setBaseitemclick(new Baseitemclick() {
             @Override
             public void onitemclick(int position) {
-                Person person = people.get(position);
+                Person person = mPeople.get(position);
                 String name = person.getName();
                 String url = person.getUrl();
                 Intent intent = new Intent(CollectActivity.this, WebActivity.class);
@@ -57,6 +61,32 @@ public class CollectActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mCollectAdapter.setLongitenclick(new CollectAdapter.longitenclick() {
+            @Override
+            public void itemclick(int position) {
+                a=position;
+            }
+        });
+         registerForContextMenu(mRlvCollect);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        menu.add(0,1,0,"删除");
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case 1:
+                Person person = mPeople.get(a);
+                MyUtils.getmMyUtils().Delete(person);
+                mPeople.remove(a);
+                mCollectAdapter.notifyDataSetChanged();
+                break;
+        }
+        return super.onContextItemSelected(item);
     }
 
     private void initView() {

@@ -53,6 +53,15 @@ public class CollectAdapter extends RecyclerView.Adapter {
                 }
             }
         });
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                if(mLongitenclick!=null){
+                    mLongitenclick.itemclick(position);
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -80,5 +89,14 @@ public class CollectAdapter extends RecyclerView.Adapter {
 
     public void setBaseitemclick(Baseitemclick baseitemclick) {
         mBaseitemclick = baseitemclick;
+    }
+
+    public interface  longitenclick{
+        void itemclick(int position);
+    }
+    private longitenclick mLongitenclick;
+
+    public void setLongitenclick(longitenclick longitenclick) {
+        mLongitenclick = longitenclick;
     }
 }
