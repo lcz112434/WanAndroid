@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SearcActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/serac_toobar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/sear_return"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/android_arrow_back" />
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/shape_yellow"
+                    android:drawableLeft="@mipmap/ic_open_some"
+                    android:id="@+id/searc_ed"
+                    android:hint=" 发现更多干货"
+                    android:paddingLeft="8dp"
+                    android:textSize="12sp"></EditText>
+
+                <Button
+                    android:id="@+id/serc_btn"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/shape_tab"
+                    android:text="搜索"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:text="热搜"
+        android:textColor="@color/red"
+        android:textSize="16sp" />
+
+
+    <com.lcz.wanandroid.utils.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/serac_rlv"
+       ></com.lcz.wanandroid.utils.FlowLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="搜索历史"
+            android:textColor="@color/blues"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_setting5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="清空"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="快点搜点干货吧٩(๑^o^๑)۶"
+        android:textSize="16dp" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".fragment.WeChat.WechatBodyFragment.WechatListFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_wechat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/wechat_rlv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/wechat_float"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/blue"
+            android:src="@drawable/loveeee"
+            app:elevation="10dp" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_wanAndorid"
+        android:checkable="true"
+        android:checked="true"
+        android:icon="@drawable/ic_wanandrodi"
+        android:title="WanAndroid" />
+    <item
+        android:id="@+id/item_collect"
+        android:checkable="true"
+        android:icon="@drawable/ic_collect"
+        android:title="收藏" />
+    <item
+        android:id="@+id/item_setting"
+        android:checkable="true"
+        android:icon="@drawable/ic_setting"
+        android:title="设置" />
+    <item
+        android:id="@+id/item_about"
+        android:checkable="true"
+        android:icon="@drawable/ic_about"
+        android:title="关于我们" />
+
+</menu>

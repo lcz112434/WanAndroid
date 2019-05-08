@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/web_collect"
+        android:icon="@drawable/loveeeee"
+        android:title="收藏"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/web_Share"
+        android:icon="@drawable/ic_sharep"
+        app:showAsAction=""
+        android:title="分享"
+        />
+    <item
+        android:id="@+id/web_Plug"
+        android:icon="@drawable/ic_web_shape"
+        android:title="用浏览器打开" />
+</menu>
