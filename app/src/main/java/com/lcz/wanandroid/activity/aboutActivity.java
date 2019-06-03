@@ -58,16 +58,16 @@ public class aboutActivity extends AppCompatActivity implements View.OnClickList
             default:
                 break;
             case R.id.tv_wechat:
-                inipop();
+                inipopp();
                 break;
             case R.id.iv_wechat:
-                inipop();
-                ToastUtil.showShort("爱你哦~");
+                ToastUtil.showShort("修改冲突咯！");
+                inipopp();
                 break;
         }
     }
 
-    private void inipop() {
+    private void inipopp() {
         View inflate = LayoutInflater.from(this).inflate(R.layout.popwindows_about, null);
         final PopupWindow popupWindow = new PopupWindow(inflate,
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
