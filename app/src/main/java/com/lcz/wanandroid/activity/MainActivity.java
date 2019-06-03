@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        //asssss
+        //这是主分支
         mHomeFragment = new HomeFragment();
         mWeChatFragment = new WeChatFragment();
         mNavigationFragment = new NavigationFragment();
