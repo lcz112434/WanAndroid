@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/img_return"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_margin="11dp"
         android:src="@drawable/android_arrow_back" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_marginTop="50dp"
         android:text="登录"
         android:textColor="@color/black"
-        android:textSize="40sp" />
+        android:textSize="39sp" />
 
     <EditText
         android:id="@+id/et_login"
