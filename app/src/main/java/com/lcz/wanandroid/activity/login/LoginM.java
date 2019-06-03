@@ -1,7 +1,5 @@
 package com.lcz.wanandroid.activity.login;
 
-import com.lcz.wanandroid.activity.Serac.SeracApi;
-import com.lcz.wanandroid.activity.Serac.SeracBean;
 import com.lcz.wanandroid.base.BaseM;
 import com.lcz.wanandroid.callback.MyCallBack;
 import com.lcz.wanandroid.utils.BaseObserver;

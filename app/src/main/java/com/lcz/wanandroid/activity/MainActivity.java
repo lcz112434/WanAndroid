@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
         //子分之
         mHomeFragment = new HomeFragment();
         mWeChatFragment = new WeChatFragment();
+        mClassFragment = new ClassFragment();
         mNavigationFragment = new NavigationFragment();
         mProjectFragment = new ProjectFragment();
-        mClassFragment = new ClassFragment();
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.fly, mHomeFragment);

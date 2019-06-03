@@ -1,7 +1,5 @@
 package com.lcz.wanandroid.activity.Serac;
 
-import com.lcz.wanandroid.activity.common.commApi;
-import com.lcz.wanandroid.activity.common.commBean;
 import com.lcz.wanandroid.base.BaseM;
 import com.lcz.wanandroid.callback.MyCallBack;
 import com.lcz.wanandroid.utils.BaseObserver;
@@ -17,7 +15,7 @@ import io.reactivex.disposables.Disposable;
 public class SeracM extends BaseM {
 
     public void getData(final MyCallBack<SeracBean> myCallBack) {
-        SeracApi classApi = HttpUtils.getInstance().getApiserver(SeracApi.url, SeracApi.class);
+        SeraceApi classApi = HttpUtils.getInstance().getApiserver(SeraceApi.url, SeraceApi.class);
         Observable<SeracBean> max = classApi.getSerac();
         max.compose(RxUtils.<SeracBean>rxObserableSchedulerHelper())
                 .subscribe(new BaseObserver<SeracBean>() {
