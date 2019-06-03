@@ -10,10 +10,11 @@
     <color name="red">#ff0000</color>
     <color name="green">#51DD42</color>
     <color name="greens">#009688</color>
+    <color name="orgen">#EE6F19</color>
+    <color name="orgen2">#EE6F19</color>
     <color name="yellow">#F7B01A</color>
     <color name="cccccc">#E7E6E4</color>
     <color name="gray">#36383E</color>
-    <color name="orgen">#EE6F19</color>
     <color name="CE1D6D6">#EAE6E9</color>
     <color name="clalcl">#FFF6EBEB</color>
     <color name="ccccccss">#00ffffff</color>
