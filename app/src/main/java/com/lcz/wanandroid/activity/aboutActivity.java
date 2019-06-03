@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.lcz.wanandroid.R;
+import com.lcz.wanandroid.utils.ToastUtil;
 
 public class aboutActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -61,6 +62,7 @@ public class aboutActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.iv_wechat:
                 inipop();
+                ToastUtil.showShort("爱你哦~");
                 break;
         }
     }
