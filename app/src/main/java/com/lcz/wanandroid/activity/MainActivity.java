@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
 
+        mWeChatFragment = new WeChatFragment();
         mHomeFragment = new HomeFragment();
         mWeChatFragment = new WeChatFragment();
         mNavigationFragment = new NavigationFragment();
